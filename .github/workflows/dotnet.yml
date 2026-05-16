@@ -33,10 +33,10 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
-    # Install Allure Commandline
+   # Install Allure
     - name: Install Allure
       run: |
-        choco install allure-commandline -y
+        npm install -g allure-commandline --save-dev
 
     # Restore NuGet Packages
     - name: Restore Dependencies
