@@ -73,7 +73,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: AllureResults
-        path: allure-results
+        path: '**/allure-results'
 
     # Upload Allure HTML Report
     - name: Upload Allure HTML Report
