@@ -46,9 +46,12 @@ jobs:
     - name: Build Project
       run: dotnet build --no-restore
 
-    # Setup Chrome Browser
-    - name: Setup Chrome
-      uses: browser-actions/setup-chrome@v1
+    - name: Setup Firefox
+      uses: browser-actions/setup-firefox@v1
+
+    - name: Verify Firefox Installation
+      run: firefox --version
+      shell: cmd
 
     # Run Selenium NUnit Tests
     - name: Run Tests
