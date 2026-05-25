@@ -17,15 +17,14 @@ namespace CloudCommTCSSeleniumC_.Drivers
         public static void InitDriver()
         {
             new DriverManager()
-                .SetUpDriver(new ChromeConfig());
+                .SetUpDriver(new FirefoxConfig());
 
-            ChromeOptions options =
-                new ChromeOptions();
+           FirefoxOptions options = new FirefoxOptions();
 
             options.AddArgument("--start-maximized");
 
             driver.Value =
-                new ChromeDriver(options);
+                new FirefoxDriver(options);
         }
 
         public static IWebDriver GetDriver()
